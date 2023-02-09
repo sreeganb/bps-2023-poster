@@ -45,7 +45,7 @@
 % Title
 % ====================
 
-\title{Transition path sampling based directed evolution}
+\title{Elucidation of the mechanism of a Morita-Baylis-Hillman type reaction catalyzed by engineered enzymes using transition path sampling}
 
 \author{Sree Ganesh Balasubramani \inst{1} \and Steven Schwartz \inst{1} }
 
@@ -56,9 +56,10 @@
 % ====================
 
 \footercontent{
-  \href{https://www.example.com}{https://www.example.com} \hfill
-  ABC Conference 2025, New York --- XYZ-1234 \hfill
-  \href{mailto:alyssa.p.hacker@example.com}{alyssa.p.hacker@example.com}}
+  \href{https://www.example.com}{https://sreeganb.github.io} \hfill
+  %ABC Conference 2025, New York --- XYZ-1234 
+  \hfill
+  \href{mailto:sreegb@arizona.edu}{sreegb@arizona.edu}}
 % (can be left out to remove footer)
 
 % ====================
@@ -77,8 +78,8 @@
 \addtobeamertemplate{headline}{}
 {
     \begin{tikzpicture}[remember picture,overlay]
-      \node [anchor=north west, inner sep=3cm] at ([xshift=0.0cm,yshift=1.0cm]current page.north west)
-      {\includegraphics[height=6.0cm]{logos/ua_stack_rgb_4.eps}}; % also try shield-white.eps
+      \node [anchor=north west, inner sep=3cm] at ([xshift=0.0cm,yshift=-2.4cm]current page.north west)
+      {\includegraphics[height=5.0cm]{logos/ua_stack_rgb_4.eps}}; % also try shield-white.eps
       %\node [anchor=north east, inner sep=3cm] at ([xshift=0.0cm,yshift=2.5cm]current page.north east)
       %{\includegraphics[height=8.0cm]{logos/cs-logo-white.png}};
     \end{tikzpicture}
@@ -94,53 +95,38 @@
 
     Some block contents, followed by a diagram, followed by a dummy paragraph.
 
+   % \begin{figure}
+   %   \centering
+   %   \begin{tikzpicture}[scale=6]
+   %     \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
+   %     \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
+   %       -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
+   %   \end{tikzpicture}
+   %   \caption{A figure caption.}
+   % \end{figure}
+
+    
+
+  \end{block}
+
+  \begin{block}{Directed evolution and the design of enzymes}
+
+    \begin{itemize}
+      \item Is it possible to design enzymes that perform complicated reactions such as this easily?
+      \item Elucidate the mechanism of the double proton transfer reaction 
+      \item Find the transition state and propose mutations that improve the catalytic efficiency
+    \end{itemize}
+
+  \end{block}
+
+  \begin{block}{A highlighted block}
     \begin{figure}
-      \centering
-      \begin{tikzpicture}[scale=6]
-        \draw[step=0.25cm,color=gray] (-1,-1) grid (1,1);
-        \draw (1,0) -- (0.2,0.2) -- (0,1) -- (-0.2,0.2) -- (-1,0)
-          -- (-0.2,-0.2) -- (0,-1) -- (0.2,-0.2) -- cycle;
-      \end{tikzpicture}
-      \caption{A figure caption.}
+        \centering
+        \includegraphics[scale=0.5]{figures/reac-121.png}
+        \caption{The protein witht he substrates bound}
     \end{figure}
 
-    
-
   \end{block}
-
-  \begin{block}{A block containing a list}
-
-    Nam vulputate nunc felis, non condimentum lacus porta ultrices. Nullam sed
-    sagittis metus. Etiam consectetur gravida urna quis suscipit.
-
-    \begin{itemize}
-      \item \textbf{Mauris tempor} risus nulla, sed ornare
-      \item \textbf{Libero tincidunt} a duis congue vitae
-      \item \textbf{Dui ac pretium} morbi justo neque, ullamcorper
-    \end{itemize}
-
-    Eget augue porta, bibendum venenatis tortor.
-
-  \end{block}
-
-  \begin{alertblock}{A highlighted block}
-
-    
-
-    \begin{itemize}
-      \item \textbf{Fusce dapibus tellus} vel tellus semper finibus. In
-        consequat, nibh sed mattis luctus, augue diam fermentum lectus.
-      \item \textbf{In euismod erat metus} non ex. Vestibulum luctus augue in
-        mi condimentum, at sollicitudin lorem viverra.
-      \item \textbf{Suspendisse vulputate} mauris vel placerat consectetur.
-        Mauris semper, purus ac hendrerit molestie, elit mi dignissim odio, in
-        suscipit felis sapien vel ex.
-    \end{itemize}
-
-    Aenean tincidunt risus eros, at gravida lorem sagittis vel. Vestibulum ante
-    ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.
-
-  \end{alertblock}
 
 \end{column}
 
@@ -151,65 +137,31 @@
   \begin{block}{A block containing an enumerated list}
 
     
-
-    \begin{enumerate}
-      \item \textbf{Morbi mauris purus}, egestas at vehicula et, convallis
-        accumsan orci. Orci varius natoque penatibus et magnis dis parturient
-        montes, nascetur ridiculus mus.
-      \item \textbf{Cras vehicula blandit urna ut maximus}. Aliquam blandit nec
-        massa ac sollicitudin. Curabitur cursus, metus nec imperdiet bibendum,
-        velit lectus faucibus dolor, quis gravida metus mauris gravida turpis.
-      \item \textbf{Vestibulum et massa diam}. Phasellus fermentum augue non
-        nulla accumsan, non rhoncus lectus condimentum.
-    \end{enumerate}
-
   \end{block}
 
   \begin{block}{Fusce aliquam magna velit}
 
-   
-
-    \begin{figure}
-      \centering
-      \begin{tikzpicture}
-        \begin{axis}[
-            scale only axis,
-            no markers,
-            domain=0:2*pi,
-            samples=100,
-            axis lines=center,
-            axis line style={-},
-            ticks=none]
-          \addplot[red] {sin(deg(x))};
-          \addplot[blue] {cos(deg(x))};
-        \end{axis}
-      \end{tikzpicture}
-      \caption{Another figure caption.}
-    \end{figure}
+    %   \begin{figure}
+    %  \centering
+    %  \begin{tikzpicture}
+    %    \begin{axis}[
+    %        scale only axis,
+    %        no markers,
+    %        domain=0:2*pi,
+    %        samples=100,
+    %        axis lines=center,
+    %        axis line style={-},
+    %        ticks=none]
+    %      \addplot[red] {sin(deg(x))};
+    %      \addplot[blue] {cos(deg(x))};
+    %    \end{axis}
+    %  \end{tikzpicture}
+    %  \caption{Another figure caption.}
+    %\end{figure}
 
   \end{block}
 
   \begin{block}{Nam cursus consequat egestas}
-
-    
-
-    \begin{itemize}
-      \item \textbf{Sed consequat} id ante vel efficitur. Praesent congue massa
-        sed est scelerisque, elementum mollis augue iaculis.
-        \begin{itemize}
-          \item In sed est finibus, vulputate
-            nunc gravida, pulvinar lorem. In maximus nunc dolor, sed auctor eros
-            porttitor quis.
-          \item Fusce ornare dignissim nisi. Nam sit amet risus vel lacus
-            tempor tincidunt eu a arcu.
-          \item Donec rhoncus vestibulum erat, quis aliquam leo
-            gravida egestas.
-        \end{itemize}
-      \item \textbf{Sed luctus, elit sit amet} dictum maximus, diam dolor
-        faucibus purus, sed lobortis justo erat id turpis.
-      \item \textbf{Pellentesque facilisis dolor in leo} bibendum congue.
-        Maecenas congue finibus justo, vitae eleifend urna facilisis at.
-    \end{itemize}
 
   \end{block}
 
@@ -222,12 +174,11 @@
   \begin{exampleblock}{A highlighted block containing some math}
 
     
-
-    \heading{A heading inside a block}
+    %\heading{A heading inside a block}
 
     
 
-    \heading{Another heading inside a block}
+    %\heading{Another heading inside a block}
 
     
 
@@ -237,20 +188,20 @@
 
     
 
-    \begin{table}
-      \centering
-      \begin{tabular}{l r r c}
-        \toprule
-        \textbf{First column} & \textbf{Second column} & \textbf{Third column} & \textbf{Fourth} \\
-        \midrule
-        Foo & 13.37 & 384,394 & $\alpha$ \\
-        Bar & 2.17 & 1,392 & $\beta$ \\
-        Baz & 3.14 & 83,742 & $\delta$ \\
-        Qux & 7.59 & 974 & $\gamma$ \\
-        \bottomrule
-      \end{tabular}
-      \caption{A table caption.}
-    \end{table}
+    %\begin{table}
+    %  \centering
+    %  \begin{tabular}{l r r c}
+    %    \toprule
+    %    \textbf{First column} & \textbf{Second column} & \textbf{Third column} & \textbf{Fourth} \\
+    %    \midrule
+    %    Foo & 13.37 & 384,394 & $\alpha$ \\
+    %    Bar & 2.17 & 1,392 & $\beta$ \\
+    %    Baz & 3.14 & 83,742 & $\delta$ \\
+    %    Qux & 7.59 & 974 & $\gamma$ \\
+    %    \bottomrule
+    %  \end{tabular}
+    %  \caption{A table caption.}
+    %\end{table}
 
     
 
