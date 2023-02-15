@@ -43,7 +43,7 @@
 
 \title{Elucidation of the mechanism of a Morita-Baylis-Hillman type reaction catalyzed by engineered enzymes using transition path sampling}
 
-\author{Sree Ganesh Balasubramani \inst{1} \and Steven Schwartz \inst{1} }
+\author{Sree Ganesh Balasubramani \inst{1} \and Steven D. Schwartz \inst{1} }
 
 \institute[shortinst]{\inst{1} Department of Chemistry and Biochemistry, The University of Arizona}
 
@@ -88,12 +88,12 @@
 \begin{column}{\colwidth}
 
 \begin{block}{Directed evolution and the design of enzymes}
-A series of engineered enzymes to perform the complex Morita-Bayliss-Hilmann reaction \cite{Crawshaw22NatChem14p313} 
+Engineered enzymes to perform the complex Morita–Baylis–Hillman (MBH) reaction \cite{Crawshaw22NatChem14p313} 
     \begin{itemize}
      % \item Is it possible to design enzymes that perform complicated reactions such as this easily?
       \item Elucidate the mechanism and transition state of the double proton transfer reaction 
       %\item Find the transition state and propose mutations that improve the catalytic efficiency
-      \item Understand the importance of quantum mechanical tunneling in the proton transfer
+      \item Understand the importance of quantum mechanical tunneling in evolutionary selection
     \end{itemize}
  
   \end{block}
@@ -107,17 +107,17 @@ and quantum mechanics (QM)
 \end{itemize}
 
 \begin{figure}
-\subfloat[]{\includegraphics[width=0.55\colwidth]{figures/mbhase.png}}
+\subfloat{\includegraphics[width=0.55\colwidth]{figures/mbhase.png}}
 \quad
-\subfloat[]{\includegraphics[width=0.38\colwidth]{figures/qmmm.png}}
+\subfloat{\includegraphics[width=0.38\colwidth]{figures/qmmm.png}}
 \end{figure}
 \end{block}
 
-  \begin{block}{Introduction to TPS}
+  \begin{block}{Introduction to transition path sampling (TPS)}
 \begin{itemize}
     \item Enhanced sampling technique
-    \item Monte-Carlo type method in the trajecotry space
-    \item Elucidate the transition state, reaction coordinates, thermodynamic and kinetic parameters
+    \item Monte-Carlo type method in the trajecotry space \cite{Bolhuis02AnnRevPhysChem53p291}
+    \item Elucidate the transition state, reaction coordinates, thermodynamic and kinetic parameters \cite{Frost23JPhysChemB127p144}
     %\item Shooting and shifting algorithm
 \end{itemize}
 \begin{figure}%
@@ -146,22 +146,38 @@ and quantum mechanics (QM)
 %\caption{Lets see}%
 \label{fig:tps-states}%
 \end{figure}
-   
+   The probability distribution of the TPS trajectories is
+   \begin{equation}
+\mathcal{P}_{\mathcal{AB}}[z_{\mathcal{T}}] = h_{\mathcal{A}}(z_0)\mathcal{P}[z(\mathcal{T})]
+h_{\mathcal{B}}(z_{\mathcal{T}})/Z_{\mathcal{AB}}(\mathcal{T})\label{eqn:tpsensem} \nonumber 
+\end{equation}
+where 
+\[
+    h_{\mathcal{A}/\mathcal{B}}(z)= 
+\begin{cases}
+    1, & \text{if } z\in \mathcal{A}/\mathcal{B}\\
+    0,              & \text{otherwise}
+\end{cases}
+\]
+and $Z_{\mathcal{AB}}(\mathcal{T})$ is the normalization factor for this 
+probability distribution function.
   \end{block}
 
   \begin{block}{Committor analysis and transition state}
   \begin{figure}
         \subfloat[Committor]{\includegraphics[width=0.4\colwidth]{figures/separatrix-full.png}}
         \qquad
-        \subfloat[Transition State]{\includegraphics[width=0.5\colwidth]{figures/dist120.pdf}}
+        \subfloat[Transition State]{\includegraphics[width=0.4\colwidth]{figures/dist120.pdf}}
         %\caption{The protein witht he substrates bound}
     \end{figure}
 
   \end{block}
 
   \begin{block}{Transition state structure of the MBHase enzyme}
+  Calculations suggest that the Arg124 residue stabilizes the O$^{-}$ anion and is essential for catalysis 
+  which is in agreement with experiments.  
 \begin{figure}
-\includegraphics[width=0.6\colwidth]{figures/trans-120.png}
+\includegraphics[width=0.54\colwidth]{figures/trans-120.png}
 \end{figure}
   \end{block}
 
@@ -182,22 +198,38 @@ and quantum mechanics (QM)
         \subfloat[Calculated Free energy for reaction catalyzed by the human MAT2A enzyme]{\includegraphics[width=0.5\colwidth]{figures/mat2a-fenergy.pdf}}
         %\caption{Modified shooting algorithm to calculate free energies}
     \end{figure}
-    
+    \begin{equation}
+A[\lambda_i] = -k_BTlog(P(\lambda_i)) +\;\text{constant} \nonumber 
+\end{equation}
+The probability of $P(\lambda_i)$ is defined by
+\begin{equation}
+P(\lambda_i) = \int \textbf{dV} \rho({\vec{q}})\delta(\lambda_i-\tilde{\lambda}(\vec{q})) \nonumber 
+\end{equation}
+In practice, the calculation of $P(\lambda_i)$ proceeds through histogram based techniques.
   \end{block}
 \begin{block}{Conclusions and future directions}
 \begin{itemize}
-    \item The transition state structure for the reaction catalyzed by an early 
-    variant of the evolutionary process of the MBHase enzyme was obtained
-    \item The transition state for the double proton transfer reaction proceeds through 
+    \item The transition state structure for the reaction catalyzed by an MBHase enzyme was obtained
+    \item The more catalytically efficient variants are currently under investigation and comparisons 
+    would be drawn to the reaction mechanism using the TPS methods discussed here 
 \end{itemize}
     
   \end{block}
   \begin{block}{References}
 
     \nocite{*}
-    \footnotesize{\bibliographystyle{plainnat}\bibliography{poster}}
-
+    \footnotesize{\bibliographystyle{unsrtnat}\bibliography{poster}}
+\begin{figure}
+\centering
+\includegraphics[scale=0.5]{figures/nih.png}
+%\caption{}
+\end{figure}
+\emph{Research reported here was supported by National Institutes of Health under award number R35GM145213}
   \end{block}
+
+%\begin{block}
+
+%\end{block}
 
 \end{column}
 
