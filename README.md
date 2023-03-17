@@ -1,10 +1,4 @@
-[![Overleaf Template](https://img.shields.io/badge/Overleaf-Template-success?logo=overleaf)](https://www.overleaf.com/latex/templates/unofficial-poster-template-for-uchicago-computer-science/kbbmbdxwbypb)
-[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/k4rtik/uchicago-poster)](https://github.com/k4rtik/uchicago-poster/releases)
-
-
-# Unofficial Poster Template for UChicago Computer Science
-
-A fork of [Gemini](https://github.com/anishathalye/gemini). Also available on [Overleaf](https://www.overleaf.com/latex/templates/unofficial-poster-template-for-uchicago-computer-science/kbbmbdxwbypb).
+# Unofficial Poster Template for University of Arizona
 
 ## Dependencies
 
